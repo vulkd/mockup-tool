@@ -1,0 +1,15 @@
+{
+    "name": "byzantine",
+    "version": "1.0.0",
+    "main": "index.js",
+    "private": true,
+    "scripts": {
+        "lint": "cd client && npm run lint && cd ../server && npm run lint && cd../",
+        "test": "cd client && npm run test && cd ../server && npm run test && cd../",
+        "build": "cd client && npm install && npm run build && cd ../server && npm install && cd ../",
+        "deploy-dev": "npm run build && cd deploy && docker-compose -p byzantine_dev -f docker-compose.yml -f docker-compose.dev.yml up -d",
+        "deploy-test": "npm run build && cd deploy && docker-compose -p byzantine_test -f docker-compose.yml -f docker-compose.test.yml up -d",
+        "deploy-staging": "npm run build && cd deploy && docker-compose -p byzantine_staging -f docker-compose.yml -f docker-compose.staging.yml up -d",
+        "deploy-prod": "npm run build && cd deploy && docker-compose -p byzantine -f docker-compose.yml -f docker-compose.prod.yml up -d"
+    }
+}

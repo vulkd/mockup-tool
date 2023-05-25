@@ -1,0 +1,16 @@
+version: "3"
+
+networks:
+  byzantine:
+
+services:
+  redis:
+    image: redis:alpine
+    restart: always
+    networks:
+      - byzantine
+    # expose:
+    #   - 6379
+    sysctls:
+      - net.core.somaxconn=65535
+     # - vm.overcommit_memory=1

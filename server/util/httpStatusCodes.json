@@ -1,0 +1,982 @@
+{
+  "100": {
+    "class": "Informational Response",
+    "code": 100,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Continue",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "101": {
+    "class": "Informational Response",
+    "code": 101,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Switching Protocols",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "102": {
+    "class": "Informational Response",
+    "code": 102,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Processing",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "103": [
+    {
+      "class": "Informational Response",
+      "code": 103,
+      "deprecated": false,
+      "description": "@todo",
+      "name": "Early Hints",
+      "rfcs": [],
+      "since": "",
+      "standard": true
+    },
+    {
+      "class": "Informational Response",
+      "code": 103,
+      "deprecated": false,
+      "description": "Used in the resumable requests proposal to resume aborted PUT or POST requests.",
+      "name": "Checkpoint",
+      "rfcs": [],
+      "since": "",
+      "standard": false
+    }
+  ],
+  "200": {
+    "class": "Success",
+    "code": 200,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "OK",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "201": {
+    "class": "Success",
+    "code": 201,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Created",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "202": {
+    "class": "Success",
+    "code": 202,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Accepted",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "203": {
+    "class": "Success",
+    "code": 203,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Non Authoritative Information",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "204": {
+    "class": "Success",
+    "code": 204,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "No Content",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "205": {
+    "class": "Success",
+    "code": 205,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Reset Content",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "206": {
+    "class": "Success",
+    "code": 206,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Partial Content",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "207": {
+    "class": "Success",
+    "code": 207,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Multi-Status",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "208": {
+    "class": "Success",
+    "code": 208,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Already Reported",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "218": {
+    "class": "Informational Response",
+    "code": 218,
+    "deprecated": false,
+    "description": "Used as a catch-all error condition for allowing response bodies to flow through Apache when ProxyErrorOverride is enabled. When ProxyErrorOverride is enabled in Apache, response bodies that contain a status code of 4xx or 5xx are automatically discarded by Apache in favor of a generic response or a custom response specified by the ErrorDocument directive.",
+    "name": "This is fine",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "226": {
+    "class": "Success",
+    "code": 226,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "IM Used",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "300": {
+    "class": "Redirection",
+    "code": 300,
+    "deprecated": false,
+    "description": "Indicates multiple options for the resource from which the client may choose (via agent-driven content negotiation). For example, this code could be used to present multiple video format options, to list files with different filename extensions, or to suggest word-sense disambiguation.",
+    "name": "Multiple Choices",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "301": {
+    "class": "Redirection",
+    "code": 301,
+    "deprecated": false,
+    "description": "This and all future requests should be directed to the given URI.",
+    "name": "Moved Permanently",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "302": {
+    "class": "Redirection",
+    "code": 302,
+    "deprecated": false,
+    "description": "Tells the client to look at (browse to) another URL. 302 has been superseded by 303 and 307. This is an example of industry practice contradicting the standard. The HTTP/1.0 specification (RFC 1945) required the client to perform a temporary redirect (the original describing phrase was \"Moved Temporarily\"), but popular browsers implemented 302 with the functionality of a 303 See Other. Therefore, HTTP/1.1 added status codes 303 and 307 to distinguish between the two behaviours. However, some Web applications and frameworks use the 302 status code as if it were the 303.",
+    "name": "Found",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "303": {
+    "class": "Redirection",
+    "code": 303,
+    "deprecated": false,
+    "description": "The response to the request can be found under another URI using the GET method. When received in response to a POST (or PUT/DELETE), the client should presume that the server has received the data and should issue a new GET request to the given URI.",
+    "name": "See Other",
+    "rfcs": [],
+    "since": "HTTP/1.1",
+    "standard": true
+  },
+  "304": {
+    "class": "Redirection",
+    "code": 304,
+    "deprecated": false,
+    "description": "Indicates that the resource has not been modified since the version specified by the request headers If-Modified-Since or If-None-Match. In such case, there is no need to retransmit the resource since the client still has a previously-downloaded copy.",
+    "name": "Not Modified",
+    "rfcs": [
+      7232
+    ],
+    "since": "",
+    "standard": true
+  },
+  "305": {
+    "class": "Redirection",
+    "code": 305,
+    "deprecated": false,
+    "description": "The requested resource is available only through a proxy, the address for which is provided in the response. For security reasons, many HTTP clients (such as Mozilla Firefox and Internet Explorer) do not obey this status code.",
+    "name": "Use Proxy",
+    "rfcs": [],
+    "since": "HTTP/1.1",
+    "standard": true
+  },
+  "306": {
+    "class": "Redirection",
+    "code": 306,
+    "deprecated": true,
+    "description": "No longer used. Originally meant \"Subsequent requests should use the specified proxy.\"",
+    "name": "Use Proxy",
+    "rfcs": [],
+    "since": "HTTP/1.1",
+    "standard": true
+  },
+  "307": {
+    "class": "Redirection",
+    "code": 307,
+    "deprecated": false,
+    "description": "In this case, the request should be repeated with another URI; however, future requests should still use the original URI. In contrast to how 302 was historically implemented, the request method is not allowed to be changed when reissuing the original request. For example, a POST request should be repeated using another POST request.",
+    "name": "Temporary Redirect",
+    "rfcs": [],
+    "since": "HTTP/1.1",
+    "standard": true
+  },
+  "308": {
+    "class": "Redirection",
+    "code": 308,
+    "deprecated": false,
+    "description": "The request and all future requests should be repeated using another URI. 307 and 308 parallel the behaviors of 302 and 301, but do not allow the HTTP method to change. So, for example, submitting a form to a permanently redirected resource may continue smoothly.",
+    "name": "Permanent Redirect",
+    "rfcs": [
+      7538
+    ],
+    "since": "",
+    "standard": true
+  },
+  "400": {
+    "class": "Client Errors",
+    "code": 400,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Bad Request",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "401": {
+    "class": "Client Errors",
+    "code": 401,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Unauthorized",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "402": {
+    "class": "Client Errors",
+    "code": 402,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Payment Required",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "403": {
+    "class": "Client Errors",
+    "code": 403,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Forbidden",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "404": {
+    "class": "Client Errors",
+    "code": 404,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Not Found",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "405": {
+    "class": "Client Errors",
+    "code": 405,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Method Not Allowed",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "406": {
+    "class": "Client Errors",
+    "code": 406,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Not Acceptable",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "407": {
+    "class": "Client Errors",
+    "code": 407,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Proxy Authentication Required",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "408": {
+    "class": "Client Errors",
+    "code": 408,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Request Timeout",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "409": {
+    "class": "Client Errors",
+    "code": 409,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Conflict",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "410": {
+    "class": "Client Errors",
+    "code": 410,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Gone",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "411": {
+    "class": "Client Errors",
+    "code": 411,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Length Required",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "412": {
+    "class": "Client Errors",
+    "code": 412,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Precondition Failed",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "413": {
+    "class": "Client Errors",
+    "code": 413,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Request Entity Too Large",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "414": {
+    "class": "Client Errors",
+    "code": 414,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Request-URI Too Long",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "415": {
+    "class": "Client Errors",
+    "code": 415,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Unsupported Media Type",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "416": {
+    "class": "Client Errors",
+    "code": 416,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Requested Range Not Satisfiable",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "417": {
+    "class": "Client Errors",
+    "code": 417,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Expectation Failed",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "418": {
+    "class": "Client Errors",
+    "code": 418,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "I'm a teapot",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "419": [
+    {
+      "class": "Client Errors",
+      "code": 419,
+      "deprecated": false,
+      "description": "@todo",
+      "name": "Insufficient Space on Resource",
+      "rfcs": [],
+      "since": "",
+      "standard": true
+    },
+    {
+      "class": "Client Errors",
+      "code": 419,
+      "deprecated": false,
+      "description": "Used by the Laravel Framework when a CSRF Token is missing or expired.",
+      "name": "Page Expired",
+      "rfcs": [],
+      "since": "",
+      "standard": false
+    }
+  ],
+  "420": [
+    {
+      "class": "Client Errors",
+      "code": 420,
+      "deprecated": false,
+      "description": "A deprecated response used by the Spring Framework when a method has failed.",
+      "name": "Method Failure",
+      "rfcs": [],
+      "since": "",
+      "standard": false
+    },
+    {
+      "class": "Client Errors",
+      "code": 420,
+      "deprecated": true,
+      "description": "Returned by version 1 of the Twitter Search and Trends API when the client is being rate limited; versions 1.1 and later use the 429 Too Many Requests response code instead.",
+      "name": "Enhance Your Calm",
+      "rfcs": [],
+      "since": "",
+      "standard": false
+    }
+  ],
+  "421": {
+    "class": "Client Errors",
+    "code": 421,
+    "deprecated": false,
+    "description": "The request was directed at a server that is not able to produce a response (for example because of connection reuse).",
+    "name": "Misdirected Request",
+    "rfcs": [
+      7540
+    ],
+    "since": "",
+    "standard": true
+  },
+  "422": {
+    "class": "Client Errors",
+    "code": 422,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "The request was well-formed but was unable to be followed due to semantic errors.",
+    "rfcs": [
+      4918
+    ],
+    "since": "",
+    "standard": true
+  },
+  "423": {
+    "class": "Client Errors",
+    "code": 423,
+    "deprecated": false,
+    "description": "The resource that is being accessed is locked.",
+    "name": "Locked",
+    "rfcs": [
+      4918
+    ],
+    "since": "",
+    "standard": true
+  },
+  "424": {
+    "class": "Client Errors",
+    "code": 424,
+    "deprecated": false,
+    "description": "The request failed because it depended on another request and that request failed (e.g., a PROPPATCH).",
+    "name": "Failed Dependency",
+    "rfcs": [
+      4918
+    ],
+    "since": "",
+    "standard": true
+  },
+  "425": {
+    "class": "Client Errors",
+    "code": 425,
+    "deprecated": false,
+    "description": "Indicates that the server is unwilling to risk processing a request that might be replayed.",
+    "name": "Too Early",
+    "rfcs": [
+      8470
+    ],
+    "since": "",
+    "standard": true
+  },
+  "426": {
+    "class": "Client Errors",
+    "code": 426,
+    "deprecated": false,
+    "description": "The client should switch to a different protocol such as TLS/1.0, given in the Upgrade header field.",
+    "name": "Upgrade Required",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "428": {
+    "class": "Client Errors",
+    "code": 428,
+    "deprecated": false,
+    "description": "The origin server requires the request to be conditional. Intended to prevent the 'lost update' problem, where a client GETs a resource's state, modifies it, and PUTs it back to the server, when meanwhile a third party has modified the state on the server, leading to a conflict.",
+    "name": "Precondition Required",
+    "rfcs": [
+      6585
+    ],
+    "since": "",
+    "standard": true
+  },
+  "429": {
+    "class": "Client Errors",
+    "code": 429,
+    "deprecated": false,
+    "description": "The user has sent too many requests in a given amount of time. Intended for use with rate-limiting schemes.",
+    "name": "Too Many Requests",
+    "rfcs": [
+      6585
+    ],
+    "since": "",
+    "standard": true
+  },
+  "430": {
+    "class": "Client Errors",
+    "code": 430,
+    "deprecated": false,
+    "description": "Used by Shopify, instead of the 429 Too Many Requests response code, when too many URLs are requested within a certain time frame.",
+    "name": "Request Header Fields Too Large",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "431": {
+    "class": "Client Errors",
+    "code": 431,
+    "deprecated": false,
+    "description": "The server is unwilling to process the request because either an individual header field, or all the header fields collectively, are too large.",
+    "name": "Request Header Fields Too Large",
+    "rfcs": [
+      6585
+    ],
+    "since": "",
+    "standard": true
+  },
+  "440": {
+    "class": "Client Errors",
+    "code": 440,
+    "deprecated": false,
+    "description": "IIS - The client's session has expired and must log in again.",
+    "name": "Login Time-out",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "444": {
+    "class": "Client Errors",
+    "code": 444,
+    "deprecated": false,
+    "description": "nginx - Used internally to instruct the server to return no information to the client and close the connection immediately.",
+    "name": "No Response",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "449": {
+    "class": "Client Errors",
+    "code": 449,
+    "deprecated": false,
+    "description": "The server cannot honour the request because the user has not provided the required information.",
+    "name": "IIS - Retry With",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "450": {
+    "class": "Client Errors",
+    "code": 450,
+    "deprecated": false,
+    "description": "The Microsoft extension code indicated when Windows Parental Controls are turned on and are blocking access to the requested webpage.",
+    "name": "Blocked by Windows Parental Controls",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "451": [
+    {
+      "class": "Client Errors",
+      "code": 451,
+      "deprecated": false,
+      "description": "A server operator has received a legal demand to deny access to a resource or to a set of resources that includes the requested resource. The code 451 was chosen as a reference to the novel Fahrenheit 451 (see the Acknowledgements in the RFC).",
+      "name": "Unavailable For Legal Reasons",
+      "rfcs": [
+        7725
+      ],
+      "since": "",
+      "standard": false
+    },
+    {
+      "class": "Client Errors",
+      "code": 451,
+      "deprecated": false,
+      "description": "Used in Exchange ActiveSync when either a more efficient server is available or the server cannot access the users' mailbox. The client is expected to re-run the HTTP AutoDiscover operation to find a more appropriate server.",
+      "name": "IIS - Redirect",
+      "rfcs": [],
+      "since": "",
+      "standard": false
+    }
+  ],
+  "460": {
+    "class": "Client Errors",
+    "code": 460,
+    "deprecated": false,
+    "description": "AWS Elastic Load Balancer - Client closed the connection with the load balancer before the idle timeout period elapsed. Typically when client timeout is sooner than the Elastic Load Balancer's timeout.",
+    "name": "Origin DNS Error",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "463": {
+    "class": "Client Errors",
+    "code": 463,
+    "deprecated": false,
+    "description": "AWS Elastic Load Balancer - The load balancer received an X-Forwarded-For request header with more than 30 IP addresses.",
+    "name": "Origin DNS Error",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "494": {
+    "class": "Client Errors",
+    "code": 494,
+    "deprecated": false,
+    "description": "nginx - Client sent too large request or too long header line.",
+    "name": "Request header too large",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "495": {
+    "class": "Client Errors",
+    "code": 495,
+    "deprecated": false,
+    "description": "nginx - An expansion of the 400 Bad Request response code, used when the client has provided an invalid client certificate.",
+    "name": "SSL Certificate ERror",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "496": {
+    "class": "Client Errors",
+    "code": 496,
+    "deprecated": false,
+    "description": "nginx - An expansion of the 400 Bad Request response code, used when a client certificate is required but not provided.",
+    "name": "SSL Certificate Required",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "497": {
+    "class": "Client Errors",
+    "code": 497,
+    "deprecated": false,
+    "description": "nginx - An expansion of the 400 Bad Request response code, used when the client has made a HTTP request to a port listening for HTTPS requests.",
+    "name": " HTTP Request Sent to HTTPS Port",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "498": {
+    "class": "Client Errors",
+    "code": 498,
+    "deprecated": false,
+    "description": "Returned by ArcGIS for Server. Code 498 indicates an expired or otherwise invalid token.",
+    "name": "Invalid Token",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "499": {
+    "class": "Client Errors",
+    "code": 499,
+    "deprecated": false,
+    "description": "Returned by ArcGIS for Server. Code 499 indicates that a token is required but was not submitted.",
+    "name": "Token Required",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "500": {
+    "class": "Server Errors",
+    "code": 500,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Server Error",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "501": {
+    "class": "Server Errors",
+    "code": 501,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Not Implemented",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "502": {
+    "class": "Server Errors",
+    "code": 502,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Bad Gateway",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "503": {
+    "class": "Server Errors",
+    "code": 503,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Service Unavailable",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "504": {
+    "class": "Server Errors",
+    "code": 504,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "Gateway Timeout",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "505": {
+    "class": "Server Errors",
+    "code": 505,
+    "deprecated": false,
+    "description": "@todo",
+    "name": "HTTP Version Not Supported",
+    "rfcs": [],
+    "since": "",
+    "standard": true
+  },
+  "506": {
+    "class": "Server Errors",
+    "code": 506,
+    "deprecated": false,
+    "description": "Transparent content negotiation for the request results in a circular reference.",
+    "name": "Variant Also Negotiates",
+    "rfcs": [
+      2295
+    ],
+    "since": "",
+    "standard": true
+  },
+  "507": {
+    "class": "Server Errors",
+    "code": 507,
+    "deprecated": false,
+    "description": "The server is unable to store the representation needed to complete the request.",
+    "name": "Insufficient Storage",
+    "rfcs": [
+      4918
+    ],
+    "since": "",
+    "standard": true
+  },
+  "508": {
+    "class": "Server Errors",
+    "code": 508,
+    "deprecated": false,
+    "description": "The server detected an infinite loop while processing the request (sent instead of 208 Already Reported).",
+    "name": "Loop Detected ",
+    "rfcs": [
+      5842
+    ],
+    "since": "",
+    "standard": true
+  },
+  "509": {
+    "class": "Server Errors",
+    "code": 509,
+    "deprecated": false,
+    "description": "The server has exceeded the bandwidth specified by the server administrator; this is often used by shared hosting providers to limit the bandwidth of customers.",
+    "name": "Bandwidth Limit Exceeded",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "510": {
+    "class": "Server Errors",
+    "code": 510,
+    "deprecated": false,
+    "description": "Further extensions to the request are required for the server to fulfil it.",
+    "name": "Not Extended",
+    "rfcs": [
+      2774
+    ],
+    "since": "",
+    "standard": true
+  },
+  "511": {
+    "class": "Server Errors",
+    "code": 511,
+    "deprecated": false,
+    "description": "The client needs to authenticate to gain network access. Intended for use by intercepting proxies used to control access to the network (e.g., \"captive portals\" used to require agreement to Terms of Service before granting full Internet access via a Wi-Fi hotspot).",
+    "name": "Network Authentication Required",
+    "rfcs": [
+      6585
+    ],
+    "since": "",
+    "standard": true
+  },
+  "520": {
+    "class": "Server Errors",
+    "code": 520,
+    "deprecated": false,
+    "description": "Cloudflare - The 520 error is used as a \"catch-all response for when the origin server returns something unexpected\", listing connection resets, large headers, and empty or invalid responses as common triggers.",
+    "name": "Unknown Error",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "521": {
+    "class": "Server Errors",
+    "code": 521,
+    "deprecated": false,
+    "description": "Cloudflare - The origin server has refused the connection from Cloudflare.",
+    "name": "Web Server Is Down",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "522": {
+    "class": "Server Errors",
+    "code": 522,
+    "deprecated": false,
+    "description": "Cloudflare - Cloudflare could not negotiate a TCP handshake with the origin server.",
+    "name": "Connection Timed Out",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "523": {
+    "class": "Server Errors",
+    "code": 523,
+    "deprecated": false,
+    "description": "Cloudflare - Cloudflare could not reach the origin server; for example, if the DNS records for the origin server are incorrect.",
+    "name": "Origin Is Unreachable",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "524": {
+    "class": "Server Errors",
+    "code": 524,
+    "deprecated": false,
+    "description": "Cloudflare - Cloudflare was able to complete a TCP connection to the origin server, but did not receive a timely HTTP response.",
+    "name": "A Timeout Occurred",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "525": {
+    "class": "Server Errors",
+    "code": 525,
+    "deprecated": false,
+    "description": "Cloudflare - Cloudflare could not negotiate a SSL/TLS handshake with the origin server.",
+    "name": "SSL Handshake Failed",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "526": {
+    "class": "Server Errors",
+    "code": 526,
+    "deprecated": false,
+    "description": "Cloudflare - Cloudflare could not validate the SSL certificate on the origin web server.",
+    "name": "Invalid SSL Certificate",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "527": {
+    "class": "Server Errors",
+    "code": 527,
+    "deprecated": false,
+    "description": "Cloudflare - Error 527 indicates that the request timed out or failed after the WAN connection had been established.",
+    "name": "Railgun Error",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "530": {
+    "class": "Server Errors",
+    "code": 530,
+    "deprecated": false,
+    "description": "Cloudflare - Error 530 indicates that the requested host name could not be resolved on the Cloudflare network to an origin server.",
+    "name": "Origin DNS Error",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  },
+  "598": {
+    "class": "Server Errors",
+    "code": 598,
+    "deprecated": false,
+    "description": "Informal convention used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy.",
+    "name": "Network read timeout error",
+    "rfcs": [],
+    "since": "",
+    "standard": false
+  }
+}

@@ -1,0 +1,15 @@
+{
+	"NGINX_PROXY_PATH": "/api",
+	"FRONTEND_URL": "http://balmora:club",
+	"DATABASE_POSTGRES_HOST": "127.0.0.1",
+	"REDIS_URL": "127.0.0.1",
+	"REDIS_USE_MOCK": false,
+	"REDIS_URL": "byzantine_redis_1",
+	"REDIS_PORT": 6379,
+	"USE_SECURE_COOKIES": false,
+	"MAIL_TRANSPORT": "smtp",
+	"MAIL_FROM_ADDR": "contact@byzantine.test",
+	"MAIL_SERV_HOST": "127.0.0.1",
+	"MAIL_SERV_PORT": 1025,
+	"MAIL_SERV_SECURE": false
+}

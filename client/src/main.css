@@ -1,0 +1,75 @@
+@tailwind base;
+
+@import url('https://rsms.me/inter/inter.css');
+/*@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}*/
+
+:root {
+	--font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	/*--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";*/
+	--color-brand-100: theme('colors.brand.100');
+	--color-brand-200: theme('colors.brand.200');
+	--color-brand-300: theme('colors.brand.300');
+	--color-brand-400: theme('colors.brand.400');
+	--color-brand-500: theme('colors.brand.500');
+	--color-brand-600: theme('colors.brand.600');
+	--color-brand-700: theme('colors.brand.700');
+	--color-brand-800: theme('colors.brand.800');
+	--color-brand-900: theme('colors.brand.900');
+
+	--color-indigo-100: theme('colors.indigo.100');
+	--color-indigo-200: theme('colors.indigo.200');
+	--color-indigo-300: theme('colors.indigo.300');
+	--color-indigo-400: theme('colors.indigo.400');
+	--color-indigo-500: theme('colors.indigo.500');
+	--color-indigo-600: theme('colors.indigo.600');
+	--color-indigo-700: theme('colors.indigo.700');
+	--color-indigo-800: theme('colors.indigo.800');
+	--color-indigo-900: theme('colors.indigo.900');
+}
+
+/*::selection,
+::-moz-selection {
+	background: theme('colors.brand.200')
+}*/
+
+.leaflet-container {
+	background-color: #000!important;
+	/*background-color: theme('colors.brand.500')!important;*/
+}
+
+
+#app {
+	font-family: var(--font-family);
+}
+
+a,
+.fake-link {
+  /*color: theme('colors.brand.600');*/
+}
+
+a:hover,
+.fake-link:hover {
+  /*text-decoration: underline;*/
+  color: theme('colors.brand.600');
+}
+
+.byzantine-button:focus {
+	outline: 1px dotted;
+}
+
+.disabled, .disabled:before, .disabled:after, .disabled:active, .disable:focus, .disabled:visited {
+	user-select: none;
+	pointer-events: none;
+	opacity: .5;
+}
+
+.hover-translate-y:hover {
+	transform: translateY(-3px);
+	transition: transform .07s ease-out;
+}
+
+@tailwind components;
+
+@tailwind utilities;

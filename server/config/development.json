@@ -1,0 +1,10 @@
+{
+	"DATABASE_POSTGRES_HOST": "127.0.0.1",
+	"REDIS_URL": "127.0.0.1",
+	"USE_SECURE_COOKIES": false,
+	"MAIL_TRANSPORT": "smtp",
+	"MAIL_FROM_ADDR": "contact@byzantine.test",
+	"MAIL_SERV_HOST": "127.0.0.1",
+	"MAIL_SERV_PORT": 1025,
+	"MAIL_SERV_SECURE": false
+}

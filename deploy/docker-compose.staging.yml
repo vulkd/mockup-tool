@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  node:
+    image: node:alpine
+    restart: always
+    expose:
+      - 3000
+    depends_on:
+      - mongo
+      - redis
+    volumes:
+      - ../server:/srv
+    user: node
+    working_dir: /srv
+    env_file:
+      - ../server/.env
+    command: npm start
+    # command: >
+    #     sh -c "rm -r node_modules &&
+    #     npm install &&
+    #     npm start"
+    # environment:
+    #   - REDIS_URL=redis://byzantine_redis_1
+    #   - MONGO_URL=mongodb://byzantine_mongo_1/byzantine-dev
+    # entrypoint: "./wait-for-it.sh byzantine_mongo_1:27017"
+
+  nginx:
+    image: nginx:alpine
+    restart: always
+    expose:
+      - 80
+      - 443
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx.staging.conf:/etc/nginx/conf.d/default.conf
+      - ./certs:/etc/nginx/ssl
+      - ../client/dist:/etc/nginx/html
